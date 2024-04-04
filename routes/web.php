@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FacebookController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,3 +30,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('auth/facebook', [FacebookController::class, 'facebookPage'])->name('facebook.page');
+Route::get('auth/facebook/callback', [FacebookController::class, 'facebookRedirect']);

@@ -52,7 +52,10 @@
                 </div>
             </div>
     
-            <x-primary-button class="ms-5">Continue With Google</x-primary-button>
+            <form action="{{route('facebook.page')}}" method="GET">
+                @csrf
+                <x-primary-button class="ms-5">Continue With Facebook</x-primary-button>
+            </form>
         </div>
     </div>
 </x-guest-layout>
