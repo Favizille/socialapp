@@ -43,4 +43,10 @@ return [
         'redirect' => 'http://localhost:8000/auth/facebook/callback',
     ],
 
+    'tiktok' => [
+        'client_id' => env('TIKTOK_CLIENT_ID'),
+        'client_secret' => env('TIKTOK_CLIENT_SECRET'),
+        'redirect' => 'http://localhost:8000/auth/facebook/callback',
+    ],
+
 ];
