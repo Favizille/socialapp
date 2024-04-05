@@ -23,7 +23,7 @@ class FacebookController extends Controller
             if($finduser){
                 Auth::login($finduser);
 
-                return redirect()->intended('dashbaord');
+                return redirect()->route('dashboard');
             }else {
                 $newUser = User::updateOrCreate(['email' => $user->email], ['name' => $user->name, 'facebook_id' => $user->id, 
                 'password' => encrypt('123456dummy')
@@ -31,7 +31,7 @@ class FacebookController extends Controller
 
             Auth::login($newUser);
 
-            return redirect()->intended('dashbaord');
+            return redirect()->route('dashboard');
             }
         } catch (Exception $e){
             dd($e->getMessage());

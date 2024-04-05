@@ -56,6 +56,8 @@
                 @csrf
                 <x-primary-button class="ms-5">Continue With Facebook</x-primary-button>
             </form>
+
+            <button> <a href="{{url('auth/facebook')}}">Login with tiktok</a></button>
         </div>
     </div>
 </x-guest-layout>
